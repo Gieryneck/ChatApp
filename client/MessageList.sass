@@ -1,0 +1,86 @@
+=border-radius($radius)
+  -webkit-border-radius: $radius
+  -moz-border-radius:    $radius
+  -ms-border-radius:     $radius
+  border-radius:         $radius
+
+
+.MessageList
+  
+    flex: 1
+    display: flex
+    flex-flow: column-reverse nowrap
+    justify-content: flex-start
+    align-items: flex-start 
+    padding: 20px 40px
+    overflow: auto
+    background-color: #fff
+    width: 75vw
+
+.Message
+
+    max-width: 50%
+    color: #c002c0 
+    align-self: flex-start
+
+    p
+        background-color: #E0C8E4
+        font-size: 18px
+        padding: 25px
+        position: relative
+        text-align: left
+        overflow-wrap: break-word
+        +border-radius(10px)
+
+        &::after
+            content: ''
+            position: absolute
+            bottom: 0
+            right: 90%
+            width: 0
+            height: 0
+            border: 20px solid transparent
+            border-top-color: #E0C8E4
+            border-bottom: 0
+            border-left: 0
+            margin-right: -20px
+            margin-bottom: -14px
+    
+    h5
+        text-align: left
+        
+.thisUsersMessage
+
+    align-self: flex-end
+    max-width: 50%
+    color: #0fa14e
+    
+
+    p
+        
+        background-color: #d2eaec
+        font-size: 18px
+        padding: 25px
+        position: relative
+        text-align: right
+        overflow-wrap: break-word
+        +border-radius(10px)
+
+        &::after
+            content: ''
+            position: absolute
+            bottom: 0
+            left: 90%
+            width: 0
+            height: 0
+            border: 20px solid transparent
+            border-top-color: #d2eaec
+            border-bottom: 0
+            border-right: 0
+            margin-left: -20px
+            margin-bottom: -14px
+
+    h5
+        text-align: right 
+        
+        
